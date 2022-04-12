@@ -7,11 +7,12 @@ Toolbox images that I use.
 ```
 sudo apt update 
 sudo apt install \
-	gcc \
 	fish \
+	gcc \
 	go-md2man \
 	golang \
 	ninja-build \
+	podman \
 	podman \
 	python3 \
 	python3-pip \
@@ -19,6 +20,9 @@ sudo apt install \
 	skopeo \
 	-y
 sudo pip3 install meson
+
+sudo echo "$USER:10000:65536" >> /etc/subuid
+sudo echo "$USER:10000:65536" >> /etc/subgid
 ```
 
 ### Build and install
