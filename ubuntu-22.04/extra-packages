@@ -37,3 +37,4 @@ python3-pip
 python3-venv
 silversearcher-ag
 apt-file
+flatpak-builder
