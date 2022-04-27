@@ -14,6 +14,7 @@ LABEL com.github.containers.toolbox="true" \
 
 COPY _readme.md /README.md
 
+RUN dpkg --add-architecture i386
 RUN apt-get update
 
 COPY missing-docs /
@@ -23,6 +24,8 @@ RUN rm /missing-docs
 COPY extra-packages /
 RUN apt-get -y install $(cat extra-packages)
 RUN rm /extra-packages
+
+RUN ln -srf /usr/bin/python3 /usr/bin/python
 
 RUN apt-get clean
 

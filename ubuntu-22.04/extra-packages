@@ -38,3 +38,5 @@ python3-venv
 silversearcher-ag
 apt-file
 flatpak-builder
+wine-stable
+wine32
