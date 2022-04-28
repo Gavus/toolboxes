@@ -40,3 +40,6 @@ apt-file
 flatpak-builder
 wine-stable
 wine32
+ripgrep
+ncdu
+htop
