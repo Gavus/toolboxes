@@ -21,8 +21,8 @@ sudo apt install \
 	-y
 sudo pip3 install meson
 
-sudo echo "$USER:10000:65536" >> /etc/subuid
-sudo echo "$USER:10000:65536" >> /etc/subgid
+echo "$USER:$UID:65536" | sudo tee -a /etc/subuid
+echo "$USER:$UID:65536" | sudo tee -a /etc/subgid
 ```
 
 ### Build and install
