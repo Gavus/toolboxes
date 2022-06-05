@@ -26,6 +26,8 @@ RUN apt-get -y install $(cat extra-packages)
 RUN rm /extra-packages
 RUN ln -srf /usr/bin/python3 /usr/bin/python
 
+RUN yes | unminimize
+
 COPY install-lazygit.sh /
 RUN /install-lazygit.sh && rm /install-lazygit.sh
 
